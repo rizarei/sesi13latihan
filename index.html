@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+<body>
+	<header>
+		<h3>Belajar DOM</h3>
+	</header>
+	<section id="content">
+		<div id="sidebar" class="sidebar-left">
+			<h3 class="title">Kategori</h3>
+			<ul>
+				<li>Pemrograman</li>
+				<li>Desain</li>
+			</ul>
+		</div>
+        <button id="myBtn">Cek</button>
+		<div id="article">
+			<h3 class="judul">Mengenal DOM</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolorem fugit magni totam vel iste eius voluptates laborum ullam doloremque, vero iusto, suscipit cumque. Hic nulla tempora ratione, est consequuntur!
+			</p>
+            <script>
+				
+                var x = document.getElementById("myBtn");
+                x.addEventListener("click", myFunction);
+                x.addEventListener("click", someOtherFunction);
+
+                function myFunction() {
+                alert ("Hai");
+                }
+
+                function someOtherFunction() {
+                alert ("Cek dulu!");
+                }
+
+               var article = document.getElementById('article')
+               article.style.backgroundColor = "pink";
+        	   article.style.padding = "15px";
+               article.style.margin = "15px";
+
+               var sidebar = document.getElementById("sidebar");
+               sidebar.style.width="35%";
+
+               var judul = document.getElementsByClassName('judul')
+               judul[0].style.backgroundColor = "skyblue";
+               
+            </script>
+		</div>
+	</section>
+</body>
+</html>

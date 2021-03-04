@@ -10,6 +10,15 @@
 <body>
 
     <h1 id="judul">LATIHAN DOM</h1>
+    <h2>Aplikasi Ubah Warna</h2>
+    <div>
+        <label>Warna latar: </label>
+        <input type="color" id="bgColor"/>
+    </div>
+    <div>
+        <label>Warna Text: </label>
+        <input type="color" id="txtColor" onchange="changeTextColor()"/>
+    </div>
 
     <div style="background-color:skyblue;" id="paragraf">
         <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -32,6 +41,17 @@
         <p id="latihan"></p>
         
         <script>
+        var bgColor = document.getElementById("bgColor");
+        var txtColor = document.getElementById("txtColor");
+
+        bgColor.addEventListener("change", (event) => {
+            document.body.style.backgroundColor = bgColor.value;
+        })
+
+        function changeTextColor() {
+            document.body.style.color = txtColor.value;
+        }
+
         var paragraf = document.getElementsByClassName("paragraf");
         setInterval(function () {
         paragraf[0].style.color = "red";
